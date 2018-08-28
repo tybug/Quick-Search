@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "Quick Search",
+	"version": "1.0",
+	"description": "Eliminates the google results page middleman",
+	"icons": {
+		"128": "images/icon128.png",
+		"48": "images/icon48.png",
+		"16": "images/icon16.png"
+	},
+	"omnibox": {
+		"keyword" : "g"
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon16.png"
+	},
+
+	"background": {
+		"scripts": ["lib/jquery-3.3.1.min.js",
+					"background.js"],
+		"persistent": false
+	},
+
+	"permissions": [
+		"http://*/",
+		"https://*/"
+	]
+
+}
