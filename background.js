@@ -19,9 +19,12 @@ function loadTab(text){
   								 // Presumably there won't be more than one image on the first result
   				console.log(url);
   			}
-  			chrome.tabs.create({
-				url: url
-			})
+
+        chrome.tabs.update({
+          url: url
+        })
+
+  			
 		} 
 
 
