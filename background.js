@@ -12,17 +12,17 @@ function loadTab(text){
   			var links = doc.links;
 
   			// There appear to be 23 links in the html before we get to our actual first displayed result
-  			var url = links[23].getAttribute("href");
-  			if(url.substring(0, 1) == "/"){
-  				console.log(url);
-  				url = links[24].getAttribute("href"); // if the first link is an image. 
-  								 // Presumably there won't be more than one image on the first result
-  				console.log(url);
+  			var i = 23;
+  			var url = links[i].getAttribute("href");
+  			while(url.substring(0, 1) == "/"){
+  				// If the link is a relative url; ie "showing results for", "search instead for", or an image, then skip it
+  				i++;
+  				url = links[i].getAttribute("href"); 
   			}
 
-        chrome.tabs.update({
-          url: url
-        })
+        	chrome.tabs.update({
+				url: url
+        	})
 
   			
 		} 
