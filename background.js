@@ -1,8 +1,5 @@
 chrome.omnibox.onInputEntered.addListener(loadTab);
 
-const LIMIT = 2; // how many results we load...for some reason we seem to get more accurate results when we load more than one.
-// Try using the url to search for "ethos" with a limit of one and a limit of two if you don't believe me.
-
 function loadTab(text){
 
 	$.ajax({
