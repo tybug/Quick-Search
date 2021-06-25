@@ -5,7 +5,7 @@ A google chrome plugin that utilizes the omnibox to cut out the results page mid
 I occasionally find myself googling something where I know exactly what the first result will be (and I know I want to navigate to that very page). This can happen often with wikipedia articles, for instance. This plugin lets you tell chrome that you want to automatically click on the first search result.
 
 
-# Usage
+## Usage
 
 * Go to chrome://extensions and enable developer mode
 * Install the extension by downloading this repo and selecting "load unpacked" on the extension page
